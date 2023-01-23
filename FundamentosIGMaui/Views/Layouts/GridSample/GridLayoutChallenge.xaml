@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundamentosIGMaui.Views.Layouts.GridSample.GridLayoutChallenge"
+             Title="GridLayoutChallenge">
+    <VerticalStackLayout BackgroundColor="#8c98b1">
+        <Frame Margin="20,30" CornerRadius="20" BackgroundColor="White" HeightRequest="200"> 
+            <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto">
+                <Frame Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" IsClippedToBounds="True" Padding="0,0,20,0" BorderColor="Transparent" WidthRequest="130">
+                    <Image Source="dotnet_bot" Aspect="AspectFit"/>
+                </Frame>
+                <!--Labels: Informacion del perfil-->
+                <Label Grid.Row="0" Grid.Column="1" Text="Dotnet bot" FontSize="18" VerticalTextAlignment="Center"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="Associate Editor" FontSize="18" TextColor="Silver" VerticalTextAlignment="Center"/>
+                
+                <!--Board de seguidores-->
+                <Frame Grid.Row="2" Grid.Column="1" BackgroundColor="#f2f6fc" BorderColor="Transparent" HeightRequest="70" Margin="0,10">
+                    <Grid RowDefinitions="*,*" ColumnDefinitions="*,*,*">
+                        <Label Grid.Row="0" Grid.Column="0" Text="Articles" FontSize="11" TextColor="Blue"/>                        
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
